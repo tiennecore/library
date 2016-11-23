@@ -27,7 +27,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
   gem "cancan"
-
+  gem 'heroku'
 group :development, :production, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
