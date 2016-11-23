@@ -1,0 +1,19 @@
+<%= form_for([@book, @book.comments.build]) do |f| %>
+  <% if @book.errors.any? %>
+    <h2>Commentaires</h2>
+    <p> <%= @book.comments.content %>
+    <%= link_to 'Supprimer', book_comment_path(book.comment, book), method: :delete %>
+    </p>
+  <% end %>
+  <br>
+  
+  <h2> Ajouter un commentaire</h2>
+
+  <div class="field">
+    <%= f.text_area :content %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
