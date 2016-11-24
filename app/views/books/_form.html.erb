@@ -27,7 +27,14 @@
       </div><br>
 
     <br>
-      <div class="actions text-center">
-        <%= f.submit 'New book',class:'btn btn-success btn-mg' %>
-      </div>
+      <% if user_signed_in? %>
+        <div class="actions text-center">
+          <%= f.submit 'New book',class:'btn btn-success btn-mg' %>
+        </div>
+      <% else %>
+        <div class="actions text-center">
+          <%= link_to "New book", new_user_session_path, class:'btn btn-success btn-mg'  %>
+        </div>
+      <% end %>
+
   <% end %>
