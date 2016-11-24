@@ -1,13 +1,11 @@
 <p id="notice"><%= notice %></p>
 <%= flash[:alert]%>
 <%=form_tag books_path, :method => 'get' do%>
-<p>
-  <%= text_field_tag :search, params[:search], placeholder: "Search title", class: "form-control" %>
-</p>
+  <p>
+    <%= text_field_tag :search, params[:search], placeholder: "Search title", class: "form-control" %>
+  </p>
 
 <%end%>
-
-<h1>Listing Books</h1>
 
 <div class="media">
   <div class="media-body">
