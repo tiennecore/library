@@ -32,12 +32,10 @@ end
 
   gem "cancan"
   gem 'heroku'
-
+  gem 'bootstrap-sass', '~> 3.3.6'
 group :development, :production, :test do
   gem 'byebug'
-  gem 'bootstrap-sass', '~> 3.3.6'
   gem 'spring'
-  gem 'bootstrap-sass', '~> 3.3.6'
   gem 'rails_admin', '~> 1.0'
   gem 'mocha'
   gem 'nifty-generators'
