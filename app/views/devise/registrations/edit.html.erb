@@ -48,26 +48,12 @@
             <%= f.password_field :current_password, autocomplete: "off" , class: "form-control"%>
           </div>
           <br>
-          <div class="row center-bloc">
-            <div class="col-xs-3"></div>
-            <div class="col-xs-2">
-              <div class="actions">
-                <%= f.submit "Update", class:'btn btn-primary btn-mg' %>
-              </div>
+            <div class="actions text-center">
+              <%= f.submit "Update", class:'btn btn-primary btn-mg' %>
+            </div> <br><br>
+            <div class="actions text-center">
+              <%= link_to "Back", :back ,class:'btn btn-danger btn-mg'%>
             </div>
-            <div class="col-xs-7"></div>
-          </div>
-          <br>
-          <div class="row center-bloc">
-            <div class="col-xs-3"></div>
-            <div class="col-xs-2">
-              <div class="actions">
-                <%= link_to "Back", :back ,class:'btn btn-primary btn-mg'%>
-              </div>
-            </div>
-            <div class="col-xs-7"></div>
-          </div>
-
         <% end %>
         <br>
       </div>

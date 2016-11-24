@@ -9,17 +9,17 @@
     </div>
     <div class="col-xs-7"></div>
   </div>
-  <div class="row text-left">
+  <div class="row ">
     <div class="col-xs-2"></div>
     <div class="col-xs-3">
       <br>
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="field">
+        <div class="field text-left">
           <%= f.label :email %><br>
           <%= f.email_field :email, class: "form-control", autofocus: true %>
         </div><br>
 
-        <div class="field">
+        <div class="field text-left">
           <%= f.label :password %><br />
           <%= f.password_field :password,class: "form-control", autocomplete: "off" %>
         </div><br>
@@ -30,20 +30,16 @@
             <%= f.label :remember_me %>
           </div>
         <% end -%>
+        <div class="actions text-center">
+            <br>
+            <%= f.submit "Log in",class:'btn btn-success btn-mg' %>
+
+        </div>
+      <% end %>
+        <br>
+        <%= render "devise/shared/links" %>
     </div>
     <div class="col-xs-7"></div>
   </div>
-  <div class="row text-left">
-    <div class="col-xs-3"></div>
-    <div class="col-xs-4">
-      <div class="actions">
-        <br>
-        <%= f.submit "Log in",class:'btn btn-success btn-mg' %>
-      </div>
-<% end %>
-    <br>
-    <%= render "devise/shared/links" %>
-    </div>
-    <div class="col-xs-5"></div>
-  </div>
+
 </div>

@@ -34,24 +34,22 @@
           <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
         </div><br>
 
-        <div class="field">
+        <div class="field ">
           <%= f.label :password_confirmation %><br >
           <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
-        </div><br>
+        </div><br><br>
+        <div class="actions text-center">
+          <%= f.submit "Sign up",class:'btn btn-success btn-mg' %>
+          <br><br>
+          <%= render "devise/shared/links" %>
+        </div>
+      <% end %>
+
     </div>
     <div class="col-xs-7"></div>
   </div>
-  <div class="row text-left">
-    <div class="col-xs-3"></div>
-    <div class="col-xs-3">
-      <div class="actions">
-        <%= f.submit "Sign up",class:'btn btn-success btn-mg' %>
-      </div>
-  <% end %>
-    <br>
-    <%= render "devise/shared/links" %>
-    </div>
-    <div class="col-xs-6"></div>
-  </div>
+
+
+
 
 </div>
