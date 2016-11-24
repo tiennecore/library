@@ -1,6 +1,18 @@
-<h1>Editing Book</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @book %> |
-<%= link_to 'Back', books_path %>
+<div class="container ">
+  <div class="row">
+    <div class="col-xs-12"></div>
+  </div>
+  <div class="row ">
+    <div class="col-xs-3"></div>
+    <div class="col-xs-4">
+      <h1 class="text-center">Editing Book</h1>
+      <%= render 'form2' %>
+      <br>
+      <div class="text-center">
+        <%= link_to 'Show', @book %>
+        <%= link_to 'Back', books_path %>
+      </div>
+    </div>
+    <div class="col-xs-5"></div>
+  </div>
+</div>

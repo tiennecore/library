@@ -21,20 +21,15 @@
         <%= f.label :author %><br><br>
         <%= f.text_field :author, class: "form-control" %>
       </div><br>
-      <div class="field">
+      <div class="field" >
         <%= f.label :resume %><br><br>
         <%= f.text_area :resume, class: "form-control", style:"height:150px;" %>
       </div><br>
 
     <br>
-      <% if user_signed_in? %>
+
         <div class="actions text-center">
-          <%= f.submit 'New book',class:'btn btn-success btn-mg' %>
+          <%= f.submit 'Update book',class:'btn btn-success btn-mg' %>
         </div>
-      <% else %>
-        <div class="actions text-center">
-          <%= link_to "New book", new_user_session_path, class:'btn btn-success btn-mg'  %>
-        </div>
-      <% end %>
 
   <% end %>
