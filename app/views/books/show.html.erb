@@ -1,22 +1,63 @@
 <p id="notice"><%= notice %></p>
+<div class="container text-center">
+  <div class="row">
+    <div class="col-xs-12"></div>
+  </div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @book.title %>
-</p>
+  <div class="row">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-4">
+      <p>
+        <h4>Title</h4>
+        <br>
+        <%= @book.title %>
+      </p>
+      <p>
+        <h4>Author</h4>
+        <br>
+        <%= @book.author %>
+      </p>
+      <p>
+        <h4>Resume</h4>
+        <br>
+        <%= @book.resume %>
+      </p>
 
-<p>
-  <strong>Author:</strong>
-  <%= @book.author %>
-</p>
+    </div>
+    <div class="col-xs-4">
+      <%= form_for([@book, @book.comments.build]) do |f| %>
+        <% if @book.errors.any? %>
+          <p>Commentaires</p>
+          <p> <%= @book.comments.content %>
+          <%= link_to 'Supprimer', book_comment_path(book.comment, book), method: :delete %>
+          </p>
+        <% end %>
+        <br>
 
-<p>
-  <strong>Resume:</strong>
-  <%= @book.resume %>
-</p>
-<%= render @book.comments %>
-<%= render "comments/form" %>
+        <h2> Ajouter un commentaire</h2>
+
+        <div class="field">
+          <%= f.text_area :content, class: "form-control" %>
+        </div>
+        <br>
+        <div class="actions ">
+          <%= f.submit 'Comment', class:'btn btn-success btn-lg' %>
+        </div>
+      <% end %>
+    </div>
+    <div class="col-xs-3"></div>
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <div class="row">
+
+    <div class="col-xs-3">
+      <%= link_to 'Edit', edit_book_path(@book) , class:'btn btn-success btn-g'%>
+    </div>
+    <div class="col-xs-3">
+      <%= link_to 'Back', books_path , class:'btn btn-danger btn-g'%>
+    </div>
+    <div class="col-xs-6"></div>
+  </div>
 
 
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+</div>
